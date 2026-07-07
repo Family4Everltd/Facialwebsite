@@ -3787,30 +3787,37 @@ showPage('home');
 .marquee{text-shadow:0 1px 2px rgba(0,0,0,.28);}
 /* #3 footer contact -> tidy stacked editable lines */
 .footer-contact .foot-line{margin:0 0 .55rem;line-height:1.55;}
-/* #5 300x300 square cards & image tiles (animated testimonial deck .t-card left untouched) */
-.sv-card,.val-card,.highlight-card,.news-card,.map-card,.about-card,.glass-card,
-.portrait-frame,.bio-portrait,.treat-img-frame,.why-frame,.interactive-map-card,.nc-img{
+/* #5a repeated card tiles -> neat 300x300 squares */
+.sv-card,.val-card,.highlight-card,.news-card,.map-card,.about-card,.glass-card{
   width:300px !important;height:300px !important;max-width:100% !important;
   aspect-ratio:auto !important;box-sizing:border-box !important;overflow:hidden !important;
 }
-/* fill images/placeholders perfectly inside the 300x300 box, no distortion */
-.sv-card img,.val-card img,.highlight-card img,.news-card img,.map-card img,.about-card img,
+/* #5b standalone FEATURE images -> big squares that FILL their section (no blank gaps) */
+.portrait-frame,.bio-portrait,.treat-img-frame,.why-frame{
+  width:100% !important;max-width:100% !important;height:auto !important;
+  aspect-ratio:1/1 !important;box-sizing:border-box !important;
+}
+.interactive-map-card{
+  width:100% !important;height:auto !important;aspect-ratio:1/1 !important;
+  min-height:240px !important;overflow:hidden !important;
+}
+/* every image/placeholder fills its box edge-to-edge, no gaps, no distortion */
+.sv-card img,.val-card img,.highlight-card img,.news-card img,.map-card img,
 .portrait-frame img,.bio-portrait img,.treat-img-frame img,.why-frame img,
-.interactive-map-card img,.nc-img img,
-.sv-card [class*="-in"],.treat-img-in,.bio-portrait-in,.portrait-frame [class*="-in"],
-.bio-portrait [class*="-in"],.treat-img-frame [class*="-in"],.why-frame [class*="-in"]{
+.interactive-map-card img,.nc-img,.nc-img img,
+.portrait-inner,.portrait-inner img,.bio-portrait-inner,.treat-img-inner,
+[class*="-img-in"],.treat-img-in,.bio-portrait-in{
   width:100% !important;height:100% !important;object-fit:cover !important;
   background-size:cover !important;background-position:center !important;
 }
-/* tile grids -> flex-wrap so 300px squares tile cleanly (no stretch/gaps) */
+/* tile grids -> flex so the 300px squares tile cleanly (no stretch/gaps) */
 .sv-grid,.values-grid,.glow-grid,.journey-grid,.news-grid{
   display:flex !important;flex-wrap:wrap !important;gap:1rem !important;
   justify-content:center !important;background:transparent !important;
 }
 /* mobile guard: never overflow the viewport */
 @media(max-width:360px){
-  .sv-card,.val-card,.highlight-card,.news-card,.map-card,.about-card,.glass-card,
-  .portrait-frame,.bio-portrait,.treat-img-frame,.why-frame,.interactive-map-card,.nc-img{
+  .sv-card,.val-card,.highlight-card,.news-card,.map-card,.about-card,.glass-card{
     width:100% !important;height:auto !important;min-height:280px !important;
   }
 }
