@@ -34,17 +34,17 @@
    ROOT VARIABLES — warm gold / cream palette
 ═══════════════════════════════════════════════════ */
 :root {
-  --gold:     #8b6914;
-  --gold-dk:  #6b4e10;
+  --gold:     #b09040;
+  --gold-dk:  #b09040;
   --gold-lt:  #b09040;
   --cream:    #d4c4a8;
   --ivory:    #ddd0b8;
   --warm:     #c8b898;
   --sand:     #bfac88;
-  --charcoal: #5c4010;
-  --dark:     #4a3008;
-  --mid:      #7a6020;
-  --soft:     #9a8040;
+  --charcoal: #b09040;
+  --dark:     #b09040;
+  --mid:      #b09040;
+  --soft:     #b09040;
   --white:    #e8dcc8;
   --border:   rgba(107,80,16,.26);
   --border-lt:rgba(107,80,16,.18);
@@ -1029,7 +1029,7 @@ footer {
 .sv-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-lt);position:relative;z-index:1; }
 .sv-card { background:var(--white);padding:2.8rem 2.2rem;position:relative;overflow:hidden;transition:background .35s; }
 .sv-card-bg { position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.07;transition:opacity .35s;z-index:0; }
-.sv-card:hover .sv-card-bg { opacity:0.12; } /*svgold2*/.sv-card-bg{opacity:.38!important;filter:brightness(1.25) saturate(1.0);}.sv-card:hover > .sv-card-bg{opacity:.48!important;}[data-glow] > *:not(.sv-card-bg){position:relative;z-index:1;}[data-glow]:hover > .sv-card-bg{opacity:.48!important;}.sv-card .sv-name{color:#4a3308!important;}.sv-card .sv-desc{color:#4a3308!important;font-weight:500!important;}.sv-card .sv-tag{color:#5c4010!important;}.sv-card .sv-num{color:#7a5a12!important;}/*gcbold*/.gc-title{color:#4a3308!important;font-weight:500!important;}.gc-desc{color:#4a3308!important;font-weight:500!important;}.gc-ul li{color:#4a3308!important;font-weight:500!important;}.gc-tag{color:#5c4010!important;opacity:1!important;font-weight:600!important;}.gc-price{color:#4a3308!important;font-weight:600!important;}/*gctreat*/[data-glow] > .sv-card-bg{opacity:.26!important;filter:brightness(1.3) saturate(1)!important;}[data-glow]:hover > .sv-card-bg{opacity:.34!important;}.gc-title{color:#3d2a06!important;}.gc-desc{color:#3d2a06!important;}.gc-ul li{color:#3d2a06!important;}.gc-price{color:#3d2a06!important;}
+.sv-card:hover .sv-card-bg { opacity:0.12; } /*svgold2*/.sv-card-bg{opacity:.38!important;filter:brightness(1.25) saturate(1.0);}.sv-card:hover > .sv-card-bg{opacity:.48!important;}[data-glow] > *:not(.sv-card-bg){position:relative;z-index:1;}[data-glow]:hover > .sv-card-bg{opacity:.48!important;}.sv-card .sv-name{color:#b09040!important;}.sv-card .sv-desc{color:#b09040!important;font-weight:500!important;}.sv-card .sv-tag{color:#b09040!important;}.sv-card .sv-num{color:#b09040!important;}/*gcbold*/.gc-title{color:#b09040!important;font-weight:500!important;}.gc-desc{color:#b09040!important;font-weight:500!important;}.gc-ul li{color:#b09040!important;font-weight:500!important;}.gc-tag{color:#b09040!important;opacity:1!important;font-weight:600!important;}.gc-price{color:#b09040!important;font-weight:600!important;}/*gctreat*/[data-glow] > .sv-card-bg{opacity:.26!important;filter:brightness(1.3) saturate(1)!important;}[data-glow]:hover > .sv-card-bg{opacity:.34!important;}.gc-title{color:#b09040!important;}.gc-desc{color:#b09040!important;}.gc-ul li{color:#b09040!important;}.gc-price{color:#b09040!important;}
 .sv-card > *:not(.sv-card-bg) { position:relative;z-index:1; }
 .sv-card:hover { background:var(--warm); }
 .sv-card::after { content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:#b09040;transform:scaleY(0);transform-origin:bottom;transition:transform .4s; }
@@ -2374,8 +2374,8 @@ body.cursor-click #wow-cursor { transform:translate(-50%,-50%) scale(0.7); }
 
 
 .fsoc{display:flex;gap:10px;margin-top:16px;}
-.fsoc a{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(107,78,16,.13);border:1.5px solid rgba(107,78,16,.4);color:#5c4010;text-decoration:none;transition:all .3s;}
-.fsoc a:hover{background:#6b4e10;border-color:#b09040;color:#e8dcc8;}
+.fsoc a{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(107,78,16,.13);border:1.5px solid rgba(107,78,16,.4);color:#b09040;text-decoration:none;transition:all .3s;}
+.fsoc a:hover{background:#b09040;border-color:#b09040;color:#e8dcc8;}
 .fsoc svg{width:17px;height:17px;fill:currentColor;display:block;}.fsoc a[aria-label="Facebook"]{background:#fff!important;border-color:#1877F2!important;}.fsoc a[aria-label="Facebook"]:hover{background:#1877F2!important;border-color:#1877F2!important;}.fsoc a[aria-label="Facebook"] svg{fill:#1877F2!important;}.fsoc a[aria-label="Facebook"]:hover svg{fill:#fff!important;}.fsoc a[aria-label="Instagram"]{background:#fff!important;border-color:#dd2a7b!important;}.fsoc a[aria-label="Instagram"]:hover{background:#dd2a7b!important;border-color:#dd2a7b!important;}.fsoc a[aria-label="Instagram"] svg{fill:#E4405F!important;}.fsoc a[aria-label="Instagram"]:hover svg{fill:#fff!important;}
 </style>
 </head>
@@ -2830,15 +2830,42 @@ Thank you. Highly recommend</p>
   <footer>
     <div class="footer-bar"></div>
     <div class="footer-grid">
-      <div><span class="footer-logo" onclick="location.href='index.html'">Facial <span class="">Aesthetics</span></span><p class="footer-desc">Precision facial aesthetics by Dr. Othman Salih — Marlow, England.</p><div class="fsoc"><a href="https://www.facebook.com/profile.php?id=61589520267248" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a><a href="https://www.instagram.com/facial.aesthetic2026?igsh=bXBoZHNxdW14ZW4x" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg></a></div></div>
-      <div><p class="footer-head">Navigate</p><ul class="footer-ul"><li class=""><a class="" href="index.html">Home</a></li><li class=""><a class="" href="about.html">About</a></li><li class=""><a class="" href="treatment.html">Treatments</a></li><li class=""><a class="" href="contact.html">Contact</a></li></ul></div>
-      <div><p class="footer-head">Treatments</p><ul class="footer-ul"><li class=""><a class="" href="treatment.html">Anti-Wrinkle</a></li><li class=""><a class="" href="treatment.html">Dermal Fillers</a></li><li class=""><a class="" href="treatment.html">Lip Enhancement</a></li></ul></div>
-      <div class="footer-contact"><p class="footer-head">Contact</p><p class="foot-line">Regal House Marlow, SL7 1ST</p>
+      <div>
+        <span class="footer-logo" onclick="location.href='index.html'">Facial <span class="">Aesthetics</span></span>
+        <p class="footer-desc">Home visits and clinic appointments by Dr. Othman Salih — Marlow, England. Precision, care, and natural beauty.</p><div class="fsoc"><a href="https://www.facebook.com/profile.php?id=61589520267248" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a><a href="https://www.instagram.com/facial.aesthetic2026?igsh=bXBoZHNxdW14ZW4x" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg></a></div>
+      </div>
+      <div>
+        <p class="footer-head">Navigate</p>
+        <ul class="footer-ul">
+          <li class=""><a class="" href="index.html">Home</a></li>
+          <li class=""><a class="" href="about.html">About Dr. Salih</a></li>
+          <li class=""><a class="" href="treatment.html">Treatments</a></li>
+          <li class=""><a class="" href="news.html">News</a></li>
+          <li class=""><a class="" href="testimonials.html">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-head">Treatments</p>
+        <ul class="footer-ul">
+          <li class=""><a class="" href="treatment.html">Anti-Wrinkle</a></li>
+          <li class=""><a class="" href="treatment.html">Dermal Fillers</a></li>
+          <li class=""><a class="" href="treatment.html">Lip Enhancement</a></li>
+          <li class=""><a class="" href="treatment.html">Facial Contouring</a></li>
+          <li class=""><a class="" href="treatment.html">Skin Rejuvenation</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <p class="footer-head">Contact</p>
+        <p class="foot-line">Regal House Marlow, SL7 1ST</p>
         <p class="foot-line">07742 098099</p>
         <p class="foot-line">facial.aesthetic@outlook.com</p>
-        <p class="foot-line">Open 7 days</p></div>
+        <p class="foot-line">Open 7 days</p>
+      </div>
     </div>
-    <div class="footer-bottom"><p class="footer-copy">© 2025 Facial Aesthetics by Dr. Othman Salih · Marlow, England</p><p class="footer-copy">GDC 170340</p></div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Facial Aesthetics by Dr. Othman Salih · Marlow, England</p>
+      <p class="footer-copy">GDC 170340</p>
+    </div>
   </footer>
 
 </div><!-- end page-home -->
@@ -3870,11 +3897,11 @@ showPage('contact');
 <grammarly-desktop-integration data-grammarly-shadow-root="true" style="visibility: visible !important;"></grammarly-desktop-integration>
 <style id="lightbrown-override">
 /* Light-brown recolor: keep text legible on newly light-brown surfaces */
-.btn-gold,.btn-dark,.nav-cta,nav.on-dark .nav-cta{color:#241a06 !important;-webkit-text-fill-color:#241a06 !important;}
-.btn-gold:hover,.btn-dark:hover,.nav-cta:hover,nav.on-dark .nav-cta:hover{background:#9a7d33 !important;color:#241a06 !important;}
+.btn-gold,.btn-dark,.nav-cta,nav.on-dark .nav-cta{color:#b09040 !important;-webkit-text-fill-color:#b09040 !important;}
+.btn-gold:hover,.btn-dark:hover,.nav-cta:hover,nav.on-dark .nav-cta:hover{background:#9a7d33 !important;color:#b09040 !important;}
 /* Inverted charcoal sections -> now light brown, force dark readable text */
-.cred-strip,.cred-strip *,.test-banner,.test-banner *,.bio-qblock,.bio-qblock *{color:#241a06 !important;-webkit-text-fill-color:#241a06 !important;}
-.cred-strip a,.test-banner a,.bio-qblock a{color:#241a06 !important;}
+.cred-strip,.cred-strip *,.test-banner,.test-banner *,.bio-qblock,.bio-qblock *{color:#b09040 !important;-webkit-text-fill-color:#b09040 !important;}
+.cred-strip a,.test-banner a,.bio-qblock a{color:#b09040 !important;}
 </style>
 
 
@@ -3932,7 +3959,24 @@ showPage('contact');
 </style>
 
 <style id="contrastfix">
-[style*="background:#b09040"] *,[style*="background: #b09040"] *{color:#2a1e08 !important;-webkit-text-fill-color:#2a1e08 !important;}
-[style*="background:#b09040"] .btn-gold,[style*="background: #b09040"] .btn-gold{background:#3d2a06 !important;color:#f5f0e8 !important;-webkit-text-fill-color:#f5f0e8 !important;}
+[style*="background:#b09040"] *,[style*="background: #b09040"] *{color:#b09040 !important;-webkit-text-fill-color:#b09040 !important;}
+[style*="background:#b09040"] .btn-gold,[style*="background: #b09040"] .btn-gold{background:#b09040 !important;color:#f5f0e8 !important;-webkit-text-fill-color:#f5f0e8 !important;}
+</style>
+<style id="palette-final">
+/* text on gold bands / image cards / buttons -> white (readable, no dark brown) */
+.marquee,.marquee-inner span,.marquee-inner .msep,
+.cred-strip,.cred-strip *,.test-banner,.test-banner *,.bio-qblock,.bio-qblock *,
+.glow-grid>div[data-glow],.glow-grid>div[data-glow] *,.sv-card,.sv-card *,
+.btn-gold,.btn-gold *,.btn-dark,.btn-dark *,.nav-cta,nav.on-dark .nav-cta,
+[style*="background:#b09040"],[style*="background:#b09040"] *,[style*="background: #b09040"],[style*="background: #b09040"] *{
+  color:#ffffff !important;-webkit-text-fill-color:#ffffff !important;
+}
+/* filled light-brown buttons with white label */
+.btn-gold,.btn-dark,.nav-cta{background:#b09040 !important;border:none !important;}
+/* button sitting ON a gold band -> white outline so it stays visible */
+[style*="background:#b09040"] .btn-gold{background:transparent !important;border:1.5px solid #ffffff !important;}
+/* image cards: raise image + shadow so white text reads clearly */
+.glow-grid>div[data-glow] .sv-card-bg,.sv-card .sv-card-bg{opacity:.5 !important;}
+.glow-grid>div[data-glow],.sv-card{text-shadow:0 1px 3px rgba(0,0,0,.55) !important;}
 </style>
 </body></html>
