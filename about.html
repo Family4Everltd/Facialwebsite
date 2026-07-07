@@ -3701,14 +3701,15 @@ showPage('about');
   width:100% !important;height:100% !important;object-fit:cover !important;
   background-size:cover !important;background-position:center !important;
 }
-/* #5c treatment glow cards -> 300x300 image tiles, text fitted */
-.glow-grid>div[data-glow]{width:300px !important;height:300px !important;max-width:100% !important;overflow:hidden !important;box-sizing:border-box !important;position:relative !important;aspect-ratio:auto !important;padding:1.25rem 1.35rem !important;display:flex !important;flex-direction:column !important;}
-.glow-grid>div[data-glow] .sv-card-bg,.glow-grid>div[data-glow] img{width:100% !important;height:100% !important;object-fit:cover !important;position:absolute !important;inset:0 !important;}
-.glow-grid>div[data-glow] .gc-num{font-size:1.8rem !important;margin:0 0 .1rem !important;}
-.glow-grid>div[data-glow] .gc-title{font-size:1.02rem !important;line-height:1.15 !important;margin:0 0 .3rem !important;}
-.glow-grid>div[data-glow] .gc-tag{font-size:.57rem !important;letter-spacing:.1em !important;line-height:1.3 !important;margin:0 0 .28rem !important;display:block !important;}
-.glow-grid>div[data-glow] .gc-price{font-size:.72rem !important;line-height:1.25 !important;margin:0 0 .38rem !important;display:block !important;}
-.glow-grid>div[data-glow] .gc-desc{font-size:.72rem !important;line-height:1.35 !important;margin:0 !important;display:-webkit-box !important;-webkit-line-clamp:4 !important;-webkit-box-orient:vertical !important;overflow:hidden !important;}
+/* #5c treatment glow cards -> 300x300 image tiles, centered & readable */
+.glow-grid>div[data-glow]{width:300px !important;height:300px !important;max-width:100% !important;overflow:hidden !important;box-sizing:border-box !important;position:relative !important;aspect-ratio:auto !important;padding:1.35rem 1.3rem !important;display:flex !important;flex-direction:column !important;justify-content:center !important;align-items:center !important;text-align:center !important;}
+.glow-grid>div[data-glow] .sv-card-bg,.glow-grid>div[data-glow] img{width:100% !important;height:100% !important;object-fit:cover !important;position:absolute !important;inset:0 !important;opacity:.14 !important;}
+.glow-grid>div[data-glow]:hover>.sv-card-bg{opacity:.24 !important;}
+.glow-grid>div[data-glow] .gc-num{display:none !important;}
+.glow-grid>div[data-glow] .gc-title{font-size:1.05rem !important;line-height:1.18 !important;margin:0 0 .35rem !important;text-align:center !important;}
+.glow-grid>div[data-glow] .gc-tag{font-size:.58rem !important;letter-spacing:.1em !important;line-height:1.3 !important;margin:0 0 .3rem !important;display:block !important;text-align:center !important;}
+.glow-grid>div[data-glow] .gc-price{font-size:.74rem !important;line-height:1.25 !important;margin:0 0 .45rem !important;display:block !important;text-align:center !important;}
+.glow-grid>div[data-glow] .gc-desc{font-size:.75rem !important;line-height:1.4 !important;margin:0 !important;text-align:center !important;display:-webkit-box !important;-webkit-line-clamp:5 !important;-webkit-box-orient:vertical !important;overflow:hidden !important;}
 .glow-grid>div[data-glow] .gc-ul{display:none !important;}
 /* tile grids -> flex so the 300px squares tile cleanly (no stretch/gaps) */
 .sv-grid,.values-grid,.glow-grid,.journey-grid,.news-grid{
