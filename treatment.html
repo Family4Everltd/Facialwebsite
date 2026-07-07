@@ -3704,6 +3704,9 @@ showPage('treatment');
   width:100% !important;height:100% !important;object-fit:cover !important;
   background-size:cover !important;background-position:center !important;
 }
+/* #5c treatment glow cards -> 300x300 image tiles */
+.glow-grid>div[data-glow]{width:300px !important;height:300px !important;max-width:100% !important;overflow:hidden !important;box-sizing:border-box !important;position:relative !important;aspect-ratio:auto !important;}
+.glow-grid>div[data-glow] .sv-card-bg,.glow-grid>div[data-glow] img{width:100% !important;height:100% !important;object-fit:cover !important;position:absolute !important;inset:0 !important;}
 /* tile grids -> flex so the 300px squares tile cleanly (no stretch/gaps) */
 .sv-grid,.values-grid,.glow-grid,.journey-grid,.news-grid{
   display:flex !important;flex-wrap:wrap !important;gap:1rem !important;
