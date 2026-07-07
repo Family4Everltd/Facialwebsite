@@ -2499,7 +2499,7 @@ body.cursor-click #wow-cursor { transform:translate(-50%,-50%) scale(0.7); }
       <span class="">Home Visits Available</span><span class="msep">✦</span>
       <span class="">5.0 Google Rating</span><span class="msep">✦</span>
       <span class="">Marlow · SL7 1ST</span><span class="msep">✦</span>
-      <span class="">Open 7 Days · 9am–9pm</span><span class="msep">✦</span>
+      <span class="">Open 7 Days</span><span class="msep">✦</span>
     </div>
   </div>
 
@@ -2695,7 +2695,7 @@ body.cursor-click #wow-cursor { transform:translate(-50%,-50%) scale(0.7); }
     </div>
     <div class="cta-right">
       <a href="tel:07742098099" class="cta-phone wow-shimmer">07742 098099</a>
-      <span class="cta-hours">Open 7 Days · 9am – 9pm</span>
+      <span class="cta-hours">Open 7 Days</span>
       <span class="cta-hours" style="margin-bottom:1.6rem;display:block;">Regal House, Marlow SL7 1ST</span>
       <button class="btn-gold" onclick="location.href='contact.html'" style="">Book Now</button>
     </div>
@@ -2731,10 +2731,10 @@ body.cursor-click #wow-cursor { transform:translate(-50%,-50%) scale(0.7); }
       </div>
       <div class="footer-contact">
         <p class="footer-head">Contact</p>
-        <p class="">Regal House Marlow, SL7 1ST
-          07742 098099
-          facial.aesthetic@outlook.com
-          Mon – Sun: Home visits &amp; clinic available</p>
+        <p class="foot-line">Regal House Marlow, SL7 1ST</p>
+        <p class="foot-line">07742 098099</p>
+        <p class="foot-line">facial.aesthetic@outlook.com</p>
+        <p class="foot-line">Open 7 days</p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -3777,6 +3777,43 @@ showPage('home');
 /* Inverted charcoal sections -> now light brown, force dark readable text */
 .cred-strip,.cred-strip *,.test-banner,.test-banner *,.bio-qblock,.bio-qblock *{color:#241a06 !important;-webkit-text-fill-color:#241a06 !important;}
 .cred-strip a,.test-banner a,.bio-qblock a{color:#241a06 !important;}
+</style>
+
+
+<style id="feature-fixes">
+/* #1 marquee moving-bar text -> white & visible */
+.marquee,.marquee-inner span,.marquee-inner .msep{color:#fff !important;-webkit-text-fill-color:#fff !important;}
+.marquee-inner .msep{opacity:.8;}
+.marquee{text-shadow:0 1px 2px rgba(0,0,0,.28);}
+/* #3 footer contact -> tidy stacked editable lines */
+.footer-contact .foot-line{margin:0 0 .55rem;line-height:1.55;}
+/* #5 300x300 square cards & image tiles (animated testimonial deck .t-card left untouched) */
+.sv-card,.val-card,.highlight-card,.news-card,.map-card,.about-card,.glass-card,
+.portrait-frame,.bio-portrait,.treat-img-frame,.why-frame,.interactive-map-card,.nc-img{
+  width:300px !important;height:300px !important;max-width:100% !important;
+  aspect-ratio:auto !important;box-sizing:border-box !important;overflow:hidden !important;
+}
+/* fill images/placeholders perfectly inside the 300x300 box, no distortion */
+.sv-card img,.val-card img,.highlight-card img,.news-card img,.map-card img,.about-card img,
+.portrait-frame img,.bio-portrait img,.treat-img-frame img,.why-frame img,
+.interactive-map-card img,.nc-img img,
+.sv-card [class*="-in"],.treat-img-in,.bio-portrait-in,.portrait-frame [class*="-in"],
+.bio-portrait [class*="-in"],.treat-img-frame [class*="-in"],.why-frame [class*="-in"]{
+  width:100% !important;height:100% !important;object-fit:cover !important;
+  background-size:cover !important;background-position:center !important;
+}
+/* tile grids -> flex-wrap so 300px squares tile cleanly (no stretch/gaps) */
+.sv-grid,.values-grid,.glow-grid,.journey-grid,.news-grid{
+  display:flex !important;flex-wrap:wrap !important;gap:1rem !important;
+  justify-content:center !important;background:transparent !important;
+}
+/* mobile guard: never overflow the viewport */
+@media(max-width:360px){
+  .sv-card,.val-card,.highlight-card,.news-card,.map-card,.about-card,.glass-card,
+  .portrait-frame,.bio-portrait,.treat-img-frame,.why-frame,.interactive-map-card,.nc-img{
+    width:100% !important;height:auto !important;min-height:280px !important;
+  }
+}
 </style>
 
 </body></html>
