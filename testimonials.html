@@ -3704,12 +3704,14 @@ showPage('testimonials');
 [style*="background:#b09040"] .btn-gold,[style*="background: #b09040"] .btn-gold{background:transparent !important;border:1.5px solid #ffffff !important;color:#ffffff !important;-webkit-text-fill-color:#ffffff !important;}
 </style>
 <style id="news-title-fix">
-/* news cards: image on top, title always visible below */
-.news-card{display:flex !important;flex-direction:column !important;}
-.news-card .nc-img{height:55% !important;flex:none !important;}
-.news-card .nc-body{padding:.75rem .9rem !important;flex:1 !important;overflow:hidden !important;display:block !important;}
-.news-card .nc-title{font-size:.92rem !important;line-height:1.25 !important;margin:0 !important;display:-webkit-box !important;-webkit-line-clamp:3 !important;-webkit-box-orient:vertical !important;overflow:hidden !important;}
-.news-card .nc-date{font-size:.58rem !important;margin:0 0 .3rem !important;display:block !important;}
-.news-card .nc-desc,.news-card .nc-more{display:none !important;}
+/* news cards: image + category + title + excerpt + read link, auto height, graceful clamps (no clipping) */
+.news-card{display:flex !important;flex-direction:column !important;height:auto !important;min-height:0 !important;overflow:hidden !important;}
+.news-card .nc-img{height:200px !important;flex:none !important;}
+.news-card .nc-body{padding:1.3rem 1.4rem 1.5rem !important;flex:none !important;overflow:visible !important;display:block !important;}
+.news-card .nc-cat{display:block !important;margin-bottom:.5rem !important;}
+.news-card .nc-title{font-size:1.05rem !important;line-height:1.25 !important;margin:0 0 .55rem !important;display:-webkit-box !important;-webkit-line-clamp:2 !important;-webkit-box-orient:vertical !important;overflow:hidden !important;}
+.news-card .nc-excerpt{font-size:.8rem !important;line-height:1.55 !important;margin:0 0 .9rem !important;display:-webkit-box !important;-webkit-line-clamp:3 !important;-webkit-box-orient:vertical !important;overflow:hidden !important;}
+.news-card .nc-read{display:inline-block !important;}
+.news-card .nc-date,.news-card .nc-desc,.news-card .nc-more{display:none !important;}
 </style>
 </body></html>
