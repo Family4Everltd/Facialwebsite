@@ -2382,10 +2382,10 @@ body.cursor-click #wow-cursor { transform:translate(-50%,-50%) scale(0.7); }
 <body class="" data-new-gr-c-s-check-loaded="14.1309.0" data-gr-ext-installed="">
 
 <!-- WOW SYSTEM: cursor / glow / progress bar -->
-<div id="wow-cursor" style="left: 451px; top: 58px;"></div>
-<div id="wow-cursor-ring" style="left: 451px; top: 58px;"></div>
-<div id="wow-glow" style="left: 451px; top: 58px;"></div>
-<div id="wow-progress" style="width: 5.14706%;"></div>
+<div id="wow-cursor" style="left: 760px; top: 0px;"></div>
+<div id="wow-cursor-ring" style="left: 760px; top: 5.67201e-10px;"></div>
+<div id="wow-glow" style="left: 760px; top: 0px;"></div>
+<div id="wow-progress" style="width: 4.95302%;"></div>
 
 <!-- ════════════════════════════════════════
      NAVIGATION
@@ -2421,8 +2421,8 @@ body.cursor-click #wow-cursor { transform:translate(-50%,-50%) scale(0.7); }
 
   <div class="page-banner" style="position:relative;background:linear-gradient(135deg,var(--ivory),var(--cream));">
     <div class="shapes-bg contact-shapes">
-      <div class="shape cs1" style="--px: -5.3456844220246245px; --py: -11.670359308131241px;"></div><div class="shape cs2" style="--px: -10.691368844049249px; --py: -23.340718616262482px;"></div>
-      <div class="shape cs3" style="--px: -16.037053266073872px; --py: -35.011077924393724px;"></div><div class="shape cs4" style="--px: -5.3456844220246245px; --py: -11.670359308131241px;"></div><div class="shape cs5" style="--px: -10.691368844049249px; --py: -23.340718616262482px;"></div>
+      <div class="shape cs1" style="--px: 0.560266330369357px; --py: -13.990170292439371px;"></div><div class="shape cs2" style="--px: 1.120532660738714px; --py: -27.980340584878743px;"></div>
+      <div class="shape cs3" style="--px: 1.6807989911080712px; --py: -41.97051087731811px;"></div><div class="shape cs4" style="--px: 0.560266330369357px; --py: -13.990170292439371px;"></div><div class="shape cs5" style="--px: 1.120532660738714px; --py: -27.980340584878743px;"></div>
     </div>
     <div class="pb-inner">
       <span class="pb-eye underline-draw is-visible">Get In Touch</span>
@@ -2461,7 +2461,7 @@ body.cursor-click #wow-cursor { transform:translate(-50%,-50%) scale(0.7); }
       <div>
         <span class="con-lbl" style="margin-bottom:.75rem;">Find Us</span>
         <!-- INTERACTIVE EXPANDING MAP CARD -->
-        <div class="interactive-map-card tilt-3d is-expanded" id="expandable-map" data-glow="" onclick="toggleExpandMap()" style="--gx: 451.87890625px; --gy: 58.32421875px; transform: perspective(700px) rotateX(0deg) rotateY(0deg) translateZ(0px);">
+        <div class="interactive-map-card tilt-3d is-expanded" id="expandable-map" data-glow="" onclick="toggleExpandMap()" style="--gx: 760.25390625px; --gy: 0.24609375px; transform: perspective(700px) rotateX(0deg) rotateY(0deg) translateZ(0px);">
           <div class="map-card-inner">
             <div class="map-card-glow"></div>
             <div class="map-grid-pattern"></div>
@@ -3651,13 +3651,14 @@ setTimeout(() => {
 
     // Animated number counters — guard against double-init reading "0" as target
     document.querySelectorAll('.hstat-n, .rating-n, .hts-n').forEach(el => {
-      if (el.dataset.target) return; // already initialised, skip
-      const raw = el.textContent.trim().replace(/[^0-9.]/g,'');
-      if (raw) {
-        el.dataset.target = raw;
-        el.dataset.suffix = el.textContent.trim().replace(/[0-9.]/g,'');
+      if (el.dataset.target || el.dataset.static) return; // already initialised or explicit static text, skip
+      const t = el.textContent.trim();
+      const m = t.match(/^([0-9]+(?:\.[0-9]+)?)([+%]?)$/); // only pure numbers (optional + or %) become animated counters
+      if (m) {
+        el.dataset.target = m[1];
+        el.dataset.suffix = m[2];
         el.classList.add('wow-counter');
-        el.textContent = '0' + el.dataset.suffix;
+        el.textContent = '0' + m[2];
       }
     });
 
