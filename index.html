@@ -2469,7 +2469,7 @@ body.cursor-click #wow-cursor { transform:translate(-50%,-50%) scale(0.7); }
       <div class="hero-stats">
         <div class="hstat"><div class="hstat-n wow-counter" data-target="5.0" data-suffix="">5.0</div><div class="hstat-l">Google Rating</div></div>
         <div class="hstat"><div class="hstat-n wow-counter" data-target="13" data-suffix="+">13+</div><div class="hstat-l">Reviews</div></div>
-        <div class="hstat"><div class="hstat-n wow-counter" data-target="0" data-suffix="Open  days a week">Open  days a week</div><div class="hstat-l"></div></div>
+        <div class="hstat"><div class="hstat-n" data-static="1">Open 7 days a week</div><div class="hstat-l"></div></div>
         <div class="hstat"><div class="hstat-n wow-counter" data-target="0" data-suffix="">0</div><div class="hstat-l"></div></div>
       </div>
     </div>
@@ -3527,13 +3527,14 @@ setTimeout(() => {
 
     // Animated number counters — guard against double-init reading "0" as target
     document.querySelectorAll('.hstat-n, .rating-n, .hts-n').forEach(el => {
-      if (el.dataset.target) return; // already initialised, skip
-      const raw = el.textContent.trim().replace(/[^0-9.]/g,'');
-      if (raw) {
-        el.dataset.target = raw;
-        el.dataset.suffix = el.textContent.trim().replace(/[0-9.]/g,'');
+      if (el.dataset.target || el.dataset.static) return; // already initialised or explicit static text, skip
+      const t = el.textContent.trim();
+      const m = t.match(/^([0-9]+(?:\.[0-9]+)?)([+%]?)$/); // only pure numbers (optional + or %) become animated counters
+      if (m) {
+        el.dataset.target = m[1];
+        el.dataset.suffix = m[2];
         el.classList.add('wow-counter');
-        el.textContent = '0' + el.dataset.suffix;
+        el.textContent = '0' + m[2];
       }
     });
 
